@@ -1,0 +1,159 @@
+import javax.swing.*;
+
+import javax.swing.ImageIcon.*;
+
+import java.awt.*;
+
+import java.awt.event.*;
+
+class girimon extends JFrame implements ActionListener
+
+{
+
+    JButton pc,mp,gs,tr,gb,next,score;  
+    int moves = 0;
+    boolean res = false;
+    static String name = "";
+    girimon()
+    {  
+        //super("Puzzle Game");  
+        
+        pc=new JButton("Pokemon Center");  //PokeCenter
+         
+        mp=new JButton("Map");  //Map
+         
+        gs=new JButton("Grass");  //Grass
+         
+        tr=new JButton("Trainer");  //Trainer
+        
+        gb=new JButton("Gym Battle"); //Gym Battle
+          
+
+        score = new JButton("SCOREBOARD");
+
+          
+        pc.setBounds(215,10,140,120);  
+          
+        mp.setBounds(60,140,140,120);  
+        
+        gs.setBounds(370,140,140,120);  
+         
+        tr.setBounds(215,270,140,120); 
+        
+        gb.setBounds(215,140,140,120);
+        
+
+        score.setBounds(210,400,150,40);
+
+        
+
+        
+        add(pc);
+        
+        add(mp);
+        
+        add(gs);
+        
+        add(tr);
+        
+        add(gb);
+        
+
+        add(score);
+
+         
+        pc.addActionListener(this);  
+         
+        mp.addActionListener(this);  
+         
+        gs.addActionListener(this);  
+         
+        tr.addActionListener(this);  
+        
+        gb.addActionListener(this); 
+        
+         
+
+       
+
+        setSize(600,600);  
+        setLayout(null);  
+        setVisible(true);  
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+    }  
+        //Function to display image
+
+    public void actionPerformed(ActionEvent e)
+
+    {
+
+        //Display Image
+        if(e.getSource()== pc)
+        {
+            
+            ImageIcon icon=new ImageIcon("C:/Users/91755/Desktop/Poke_pics/Pokecenter.JPG");
+            JFrame cframe = new JFrame();
+            JLabel label=new JLabel(icon);
+            cframe.setVisible(true);
+            cframe.add(label);
+
+            cframe.pack();
+             
+            cframe.setSize(1000,1000);
+         }
+         else if(e.getSource() == mp)
+         {
+            ImageIcon icon2=new ImageIcon("C:/Users/91755/Desktop/Poke_pics/Map_1.png");
+            JFrame dframe = new JFrame();
+            JLabel label2=new JLabel(icon2);
+            dframe.setVisible(true);
+            dframe.add(label2);
+
+            dframe.pack();
+             
+            dframe.setSize(1000,1000);
+         }
+         else if(e.getSource() == gs)
+         {
+            ImageIcon icon3=new ImageIcon("C:/Users/91755/Desktop/Poke_pics/One.png");
+            JFrame eframe = new JFrame();
+            JLabel label3=new JLabel(icon3);
+            eframe.setVisible(true);
+            eframe.add(label3);
+
+            eframe.pack();
+             
+            eframe.setSize(1000,1000);
+         }
+         else if(e.getSource() == gb)
+         {
+            ImageIcon icon4=new ImageIcon("C:/Users/91755/Desktop/Poke_pics/Third_Second_slide.png");
+            JFrame gframe = new JFrame();
+            JLabel label4=new JLabel(icon4);
+            gframe.setVisible(true);
+            gframe.add(label4);
+
+            gframe.pack();
+             
+            gframe.setSize(1000,1000);
+         }
+         else if(e.getSource() == tr)
+         {
+            ImageIcon icon4=new ImageIcon("C:/Users/91755/Desktop/Poke_pics/Biker_Lukas.png");
+            JFrame gframe = new JFrame();
+            JLabel label4=new JLabel(icon4);
+            gframe.setVisible(true);
+            gframe.add(label4);
+
+            gframe.pack();
+             
+            gframe.setSize(1000,1000);
+         }
+    }
+    public static void main(String[]args)
+    {
+       girimon o1 = new girimon(); 
+    }
+
+}
